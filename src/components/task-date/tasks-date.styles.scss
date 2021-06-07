@@ -1,0 +1,62 @@
+$generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
+
+@mixin task-item() {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 18px;
+  color: #333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  list-style-type: none;
+  border-bottom: 1px solid #f0f0f0;
+  padding-left: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f9f9f9;
+  }
+}
+
+@mixin box-overlay() {
+  -webkit-box-shadow: $generic-box-shadow;
+  box-shadow: $generic-box-shadow;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 85px;
+  border-radius: 3px;
+}
+
+.task-date {
+  @include box-overlay();
+  background-color: #fff;
+  width: 200px;
+  right: 0;
+
+  &__list li {
+    @include task-item();
+    padding: 0;
+
+    div:nth-child(1) {
+      padding: 10px;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      span:first-of-type {
+        margin-right: 10px;
+
+        svg {
+          fill: grey;
+        }
+      }
+    }
+  }
+}

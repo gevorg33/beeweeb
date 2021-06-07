@@ -1,0 +1,61 @@
+.active {
+  font-weight: bold;
+  background-color: white;
+}
+
+.sidebar__project{
+  cursor: pointer;
+
+  div:nth-child(1) {
+    padding: 5px 0;
+    padding-left: 10px;
+    padding-right: 15px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  &-delete {
+    margin-left: auto;
+    display: none;
+
+    svg {
+      color: #cacaca;
+    }
+  }
+
+  &.active, &:hover {
+    font-weight: bold;
+    background-color: white;
+  }
+
+  &:nth-child(1) {
+    .sidebar__dot {
+      color: #6accbc;
+    }
+  }
+  &:nth-child(2) {
+    .sidebar__dot {
+      color: #fad003;
+    }
+  }
+  &:nth-child(3) {
+    .sidebar__dot {
+      color: #ff8d85;
+    }
+  }
+  &:nth-child(4) {
+    .sidebar__dot {
+      color: #ff9932;
+    }
+  }
+  &:nth-child(5) {
+    .sidebar__dot {
+      color: #af38eb;
+    }
+  }
+}
